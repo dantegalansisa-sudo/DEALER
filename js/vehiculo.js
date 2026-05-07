@@ -3,10 +3,17 @@
 // Vehicle detail: gallery, specs, WhatsApp CTA, similar
 // ═══════════════════════════════════════════
 
+// Reload on hash change so similar-vehicle links re-render the page
+window.addEventListener('hashchange', function() {
+  window.location.reload();
+});
+
 document.addEventListener('DOMContentLoaded', function() {
 
-  var params = new URLSearchParams(window.location.search);
-  var id = parseInt(params.get('id'));
+  // Hash-routing primary (?id= as fallback for legacy links)
+  var hashId = parseInt((window.location.hash || '').replace('#', ''));
+  var queryId = parseInt(new URLSearchParams(window.location.search).get('id'));
+  var id = !isNaN(hashId) ? hashId : queryId;
   var vehiculo = null;
 
   for (var i = 0; i < VEHICULOS.length; i++) {
@@ -22,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ─── Page Title ───
-  document.title = vehiculo.marca + ' ' + vehiculo.modelo + ' ' + vehiculo.ano + ' — Isidro Motors';
+  document.title = vehiculo.marca + ' ' + vehiculo.modelo + ' ' + vehiculo.ano + ' — Matos Dealer';
 
   // ─── Breadcrumb ───
   document.getElementById('breadcrumbCurrent').textContent = vehiculo.marca + ' ' + vehiculo.modelo + ' ' + vehiculo.ano;

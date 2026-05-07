@@ -37,10 +37,13 @@ window.renderVehicleCard = function(v, index) {
   }
   priceHtml += formatPrecio(v);
 
-  return '<article class="featured__card" onclick="window.location.href=\'vehiculo.html?id=' + v.id + '\'" style="animation: fadeUp 0.4s ease ' + delay + 's forwards; opacity:0">' +
+  return '<a class="featured__card" href="vehiculo.html#' + v.id + '" style="animation: fadeUp 0.4s ease ' + delay + 's forwards; opacity:0; text-decoration:none; color:inherit; display:block">' +
     '<div style="overflow:hidden; position:relative">' +
       '<img src="' + v.imagenes[0] + '" alt="' + v.marca + ' ' + v.modelo + '" class="featured__card-img" loading="lazy">' +
       badges +
+      '<button class="wish-btn" data-wish-id="' + v.id + '" aria-label="Guardar en favoritos">' +
+        '<svg viewBox="0 0 24 24"><path class="wish-fill wish-stroke" stroke="currentColor" stroke-width="1.6" fill="none" d="M12 21s-7-4.534-7-10a4.5 4.5 0 0 1 8-2.83A4.5 4.5 0 0 1 19 11c0 5.466-7 10-7 10z"/></svg>' +
+      '</button>' +
     '</div>' +
     '<div class="featured__card-body">' +
       '<span class="featured__card-tag">' + v.tipo + ' · ' + v.ano + '</span>' +
@@ -48,7 +51,7 @@ window.renderVehicleCard = function(v, index) {
       '<p class="featured__card-desc">' + (v.kilometraje > 0 ? v.kilometraje.toLocaleString('es-DO') + ' km · ' : '0 km · ') + v.combustible + ' · ' + v.transmision + '</p>' +
       '<p class="featured__card-price">' + priceHtml + '</p>' +
     '</div>' +
-  '</article>';
+  '</a>';
 };
 
 // ─── DOM-dependent setup ───

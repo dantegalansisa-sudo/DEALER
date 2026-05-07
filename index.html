@@ -3,686 +3,450 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Isidro Motors — Vehículos de Todas las Marcas en Azua</title>
-  <meta name="description" content="Isidro Motors: Tu dealer de confianza en Azua. Vehículos nuevos y usados de todas las marcas. Toyota, Honda, Hyundai, Kia, Nissan y más.">
+  <title>Matos Dealer — Concesionario Premium · República Dominicana</title>
+  <meta name="description" content="Matos Dealer · Concesionario premium en Santo Domingo. Inventario multimarca, servicio impecable, experiencia exclusiva.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/shared.css?v=3">
-  <link rel="stylesheet" href="css/index.css?v=3">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Outfit:wght@200;300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/shared.css?v=6">
+  <link rel="stylesheet" href="css/index.css?v=6">
+  <link rel="stylesheet" href="css/pages.css?v=1">
 </head>
 <body>
 
   <!-- ═══════════════════════════════════════════
        NAVBAR
   ═══════════════════════════════════════════ -->
-  <nav class="navbar" id="navbar">
-    <a href="index.html" class="navbar__logo">ISIDRO <span>MOTORS</span></a>
+  <nav class="navbar navbar--floating" id="navbar">
+    <a href="index.html" class="navbar__logo">MATOS <span>DEALER</span></a>
     <div class="navbar__links">
-      <a href="inventario.html">Inventario</a>
-      <a href="#marcas">Marcas</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#ubicacion">Ubicación</a>
-      <a href="https://wa.me/18296806829?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo" class="navbar__whatsapp" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.106 1.519 5.834L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.855 0-3.63-.5-5.182-1.446l-.37-.222-3.842 1.007 1.024-3.742-.243-.387A9.78 9.78 0 012.182 12c0-5.41 4.408-9.818 9.818-9.818S21.818 6.59 21.818 12s-4.408 9.818-9.818 9.818z"/></svg>
-        WhatsApp
+      <a href="#inventario">Inventario</a>
+      <a href="comparar.html">Comparar</a>
+      <a href="cita.html">Cita</a>
+      <a href="editorial.html">Editorial</a>
+      <a href="favoritos.html" class="navbar__fav">
+        Favoritos
+        <span class="wish-counter-pill is-empty" data-wish-counter>0</span>
       </a>
     </div>
+    <a href="https://wa.me/18293189380?text=Hola%2C%20me%20interesa%20agendar%20una%20visita" class="navbar__cta" target="_blank" rel="noopener">
+      <span>Contactar</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
     <button class="navbar__burger" id="burger" aria-label="Abrir menú">
-      <span></span><span></span><span></span>
+      <span></span><span></span>
     </button>
   </nav>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="inventario.html">Inventario</a>
-    <a href="#marcas">Marcas</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#ubicacion">Ubicación</a>
-    <a href="#contacto">Contacto</a>
-    <a href="https://wa.me/18296806829?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo" target="_blank" rel="noopener" class="btn btn--whatsapp" style="margin-top:16px;">
-      <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.106 1.519 5.834L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-      WhatsApp
-    </a>
+    <a href="#inventario">Inventario</a>
+    <a href="#manifesto">Filosofía</a>
+    <a href="#experience">Experiencia</a>
+    <a href="#showroom">Showroom</a>
+    <a href="https://wa.me/18293189380" target="_blank" rel="noopener" class="btn-cinema btn-cinema--solid btn-cinema--invert" style="margin-top:24px">Contactar por WhatsApp</a>
   </div>
 
   <!-- ═══════════════════════════════════════════
-       HERO
+       HERO — CINEMATIC VIDEO
   ═══════════════════════════════════════════ -->
-  <section class="hero">
-    <img
-      src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80"
-      alt="Vehículo de lujo en carretera"
-      class="hero__bg"
-      id="heroBg"
-      loading="eager"
-    >
+  <section class="hero" id="hero">
+    <video
+      class="hero__video"
+      id="heroVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="porche.png">
+      <source src="video.mp4" type="video/mp4">
+    </video>
     <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <p class="hero__subtitle">Dealer multimarca en Azua</p>
-      <h1 class="hero__title">Encuentra Tu <strong>Vehículo Ideal</strong></h1>
-      <p class="hero__desc">Todas las marcas, los mejores precios y la confianza que solo Isidro Motors te puede ofrecer en Azua, República Dominicana.</p>
-      <form class="hero-search" id="heroSearch" action="inventario.html" method="get">
-        <input type="text" name="buscar" placeholder="Buscar por marca, modelo, tipo..." autocomplete="off">
-        <button type="submit" class="hero-search__btn">Buscar</button>
-      </form>
-      <div class="hero__actions">
-        <a href="inventario.html" class="btn btn--primary">Ver Inventario</a>
-        <a href="https://wa.me/18296806829?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo" target="_blank" rel="noopener" class="btn btn--outline">
-          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.106 1.519 5.834L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-          Escríbenos
+
+    <div class="hero__inner">
+      <div class="hero__text">
+        <span class="hero__eyebrow">
+          <span class="hero__pulse"></span>
+          Matos Dealer · República Dominicana
+        </span>
+        <h1 class="hero__title">
+          Donde la <em>precisión</em>
+          <br>encuentra la <em>pasión</em>.
+        </h1>
+        <p class="hero__desc">
+          Vehículos seleccionados con cuidado obsesivo.
+          Servicio que respeta cada detalle. Una experiencia
+          que merece tu tiempo.
+        </p>
+        <div class="hero__cta">
+          <a href="#inventario" class="btn-cinema btn-cinema--solid btn-cinema--invert">
+            Ver inventario
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#showroom" class="btn-cinema btn-cinema--ghost-light">
+            Agendar visita
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#brands" class="hero__scroll" aria-label="Desplazar hacia abajo">
+      <span class="hero__scroll-text">Scroll</span>
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BRANDS MARQUEE — luxury + real brands
+  ═══════════════════════════════════════════ -->
+  <section class="brands-marquee" id="brands">
+    <div class="brands-marquee__track">
+      <span class="brands-marquee__item">Porsche</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Mercedes-Benz</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">BMW</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Audi</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Lexus</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Land Rover</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Toyota</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Honda</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Volvo</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Porsche</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Mercedes-Benz</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">BMW</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Audi</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Lexus</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Land Rover</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Toyota</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Honda</span><span class="brands-marquee__sep">✦</span>
+      <span class="brands-marquee__item">Volvo</span><span class="brands-marquee__sep">✦</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       INVENTARIO — search, filters, grid
+  ═══════════════════════════════════════════ -->
+  <section class="inventory" id="inventario">
+    <div class="inventory__header">
+      <span class="section-eyebrow">— Inventario</span>
+      <h2 class="section-display">
+        Encuentra <em>tu próximo</em><br>
+        vehículo.
+      </h2>
+      <p class="section-lede">Explora nuestra selección activa de vehículos disponibles. Filtra por marca, busca por modelo, y descubre el que conecte con tu estilo.</p>
+    </div>
+
+    <form class="inventory__search" id="inventorySearch" onsubmit="event.preventDefault();">
+      <span class="inventory__search-icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/></svg>
+      </span>
+      <input id="invQuery" type="text" placeholder="Busca por marca, modelo, año…" autocomplete="off">
+      <button type="submit" class="inventory__search-btn">Buscar</button>
+    </form>
+
+    <div class="inventory__filters" id="inventoryFilters">
+      <button class="inv-chip is-active" data-filter="all">Todos</button>
+      <button class="inv-chip" data-filter="Porsche">Porsche</button>
+      <button class="inv-chip" data-filter="Mercedes">Mercedes-Benz</button>
+      <button class="inv-chip" data-filter="BMW">BMW</button>
+      <button class="inv-chip" data-filter="Audi">Audi</button>
+      <button class="inv-chip" data-filter="Toyota">Toyota</button>
+      <button class="inv-chip" data-filter="Honda">Honda</button>
+      <button class="inv-chip" data-filter="Land Rover">Land Rover</button>
+    </div>
+
+    <div class="inventory__grid" id="inventoryGrid"><!-- JS-rendered --></div>
+
+    <div class="inventory__more">
+      <a href="inventario.html" class="btn-cinema btn-cinema--ghost">
+        Ver inventario completo
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MANIFESTO — split sticky
+  ═══════════════════════════════════════════ -->
+  <section class="manifesto" id="manifesto">
+    <div class="manifesto__inner">
+      <div class="manifesto__sticky">
+        <span class="section-eyebrow section-eyebrow--light">— Filosofía</span>
+        <h2 class="section-display section-display--light">
+          Un vehículo <em>excepcional</em><br>
+          merece una experiencia<br>
+          a su altura.
+        </h2>
+      </div>
+
+      <div class="manifesto__col">
+        <div class="manifesto__block">
+          <span class="manifesto__num">I.</span>
+          <h3>Selección</h3>
+          <p>Cada vehículo en nuestra colección pasa por una curaduría rigurosa. Procedencia, historial, condición mecánica, estética. Nada se aprueba por aproximación.</p>
+        </div>
+
+        <div class="manifesto__block">
+          <span class="manifesto__num">II.</span>
+          <h3>Atención</h3>
+          <p>Un asesor dedicado. Un proceso transparente. La compra de un vehículo no debería sentirse como una transacción — debería sentirse como una conversación entre quienes valoran lo mismo.</p>
+        </div>
+
+        <div class="manifesto__block">
+          <span class="manifesto__num">III.</span>
+          <h3>Servicio</h3>
+          <p>Entregamos el vehículo. Pero permanecemos. Mantenimiento programado, asistencia técnica, repuestos originales. Una relación que comienza en la entrega y se sostiene en el tiempo.</p>
+        </div>
+
+        <div class="manifesto__block">
+          <span class="manifesto__num">IV.</span>
+          <h3>Discreción</h3>
+          <p>Tu inversión, tu privacidad. Procesos confidenciales, atención sin protocolos invasivos, espacios privados de exhibición y entrega cuando así lo requieras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EXPERIENCE — bento grid
+  ═══════════════════════════════════════════ -->
+  <section class="experience" id="experience">
+    <div class="exp__header">
+      <span class="section-eyebrow">— Experiencia</span>
+      <h2 class="section-display">
+        Más allá de la <em>compra</em>.
+      </h2>
+    </div>
+
+    <div class="exp__bento">
+      <article class="exp__card exp__card--lg" data-tilt>
+        <div class="exp__icon">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="16" cy="16" r="13"/>
+            <path d="M16 8v8l5 3"/>
+          </svg>
+        </div>
+        <h3>Test Drive Privado</h3>
+        <p>Reserva una sesión exclusiva con el vehículo de tu interés. Ruta personalizada, sin presión, con un asesor especializado.</p>
+        <span class="exp__tag">Experiencia · 90 min</span>
+      </article>
+
+      <article class="exp__card" data-tilt>
+        <div class="exp__icon">
+          <svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M4 12l12-7 12 7v8l-12 7-12-7z"/>
+            <path d="M4 12l12 7 12-7"/>
+          </svg>
+        </div>
+        <h3>Financiamiento</h3>
+        <p>Estructuras a medida con bancos aliados. Aprobación discreta y ágil.</p>
+      </article>
+
+      <article class="exp__card" data-tilt>
+        <div class="exp__icon">
+          <svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M6 8h20v18H6z"/>
+            <path d="M6 14h20"/>
+            <path d="M11 4v8M21 4v8"/>
+          </svg>
+        </div>
+        <h3>Traspaso Incluido</h3>
+        <p>Toda la gestión legal y documental se entrega con el vehículo.</p>
+      </article>
+
+      <article class="exp__card exp__card--dark" data-tilt>
+        <div class="exp__icon">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M4 22c0-6 5-11 12-11s12 5 12 11"/>
+            <path d="M11 16c0-3 2-6 5-6s5 3 5 6"/>
+            <circle cx="16" cy="6" r="3"/>
+          </svg>
+        </div>
+        <h3>Servicio Postventa</h3>
+        <p>Mantenimiento programado en taller especializado. Asistencia técnica permanente, repuestos originales bajo orden directa.</p>
+        <span class="exp__tag exp__tag--light">Garantía extendida disponible</span>
+      </article>
+
+      <article class="exp__card exp__card--accent" data-tilt>
+        <div class="exp__icon">
+          <svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M16 4l4 8 9 1-7 7 2 9-8-5-8 5 2-9-7-7 9-1z"/>
+          </svg>
+        </div>
+        <h3>Programa Heritage</h3>
+        <p>Acceso prioritario a ediciones limitadas y vehículos certificados de colección.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SHOWROOM
+  ═══════════════════════════════════════════ -->
+  <section class="showroom" id="showroom">
+    <div class="showroom__inner">
+      <div class="showroom__text">
+        <span class="section-eyebrow section-eyebrow--light">— Showroom</span>
+        <h2 class="section-display section-display--light">
+          Santo Domingo,<br>
+          <em>República Dominicana</em>.
+        </h2>
+        <p class="section-lede section-lede--light">Visítanos con cita. Espacios privados, atención discreta, proceso de exhibición personalizado.</p>
+
+        <div class="showroom__info">
+          <div class="showroom__info-row">
+            <span class="showroom__info-label">Dirección</span>
+            <span class="showroom__info-value">Av. Winston Churchill, Piantini<br>Santo Domingo, D.N.</span>
+          </div>
+          <div class="showroom__info-row">
+            <span class="showroom__info-label">Horario</span>
+            <span class="showroom__info-value">Lunes a Sábado · 9:00 — 19:00<br>Domingo · solo con cita</span>
+          </div>
+          <div class="showroom__info-row">
+            <span class="showroom__info-label">WhatsApp</span>
+            <span class="showroom__info-value">+1 (829) 318-9380</span>
+          </div>
+        </div>
+
+        <div class="showroom__cta">
+          <a href="https://wa.me/18293189380?text=Hola%2C%20me%20interesa%20agendar%20una%20visita" class="btn-cinema btn-cinema--solid btn-cinema--invert" target="_blank" rel="noopener">
+            Agendar visita privada
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="showroom__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7!2d-69.945!3d18.474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.%20Winston%20Churchill%2C%20Santo%20Domingo!5e0!3m2!1ses!2sdo!4v1"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Showroom Matos Dealer · Santo Domingo">
+        </iframe>
+        <div class="showroom__map-tag">
+          <span class="showroom__map-dot"></span>
+          Showroom Piantini
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONCIERGE — direct contact strip
+  ═══════════════════════════════════════════ -->
+  <section class="concierge" id="concierge">
+    <div class="concierge__inner">
+      <div class="concierge__head">
+        <span class="section-eyebrow section-eyebrow--light">— Concierge</span>
+        <h2 class="section-display section-display--light">
+          Atención <em>directa</em>.<br>
+          Sin intermediarios.
+        </h2>
+        <p class="section-lede section-lede--light">Habla con un asesor especializado. Disponible para visitas privadas, valoración de tu vehículo actual, o conversaciones confidenciales sobre nuestra colección.</p>
+      </div>
+
+      <div class="concierge__grid">
+        <a href="tel:+18293189380" class="concierge__card">
+          <span class="concierge__icon">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22.5 6c1.5.5 2.5 1.5 3 3M22.5 2c3 1 5 3 6 6M21 19l-2 1c-3-2-5-4-7-7l1-2c.5-.5.5-1 0-1.5l-3-4C9.5 4.8 8.5 5 8 5.5L6 7c-1 1-1 3-1 5 0 4 3 9 7 13s9 7 13 7c2 0 4 0 5-1l1.5-2c.5-.5.5-1.5 0-2l-4-3c-.5-.5-1-.5-1.5 0z"/></svg>
+          </span>
+          <div>
+            <span class="concierge__label">Llámanos</span>
+            <span class="concierge__value">+1 (829) 318-9380</span>
+            <span class="concierge__hint">Lun—Sáb · 9:00 — 19:00</span>
+          </div>
+        </a>
+
+        <a href="https://wa.me/18293189380?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo" target="_blank" rel="noopener" class="concierge__card concierge__card--accent">
+          <span class="concierge__icon">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="currentColor"><path d="M16 2.667C8.637 2.667 2.667 8.637 2.667 16c0 2.351.617 4.654 1.79 6.683L2.667 29.333l6.86-1.79A13.323 13.323 0 0 0 16 29.333c7.364 0 13.333-5.97 13.333-13.333S23.363 2.667 16 2.667zm6.07 16.107c-.333-.166-1.967-.97-2.272-1.082-.305-.111-.527-.166-.749.167s-.86 1.082-1.054 1.304c-.194.222-.388.25-.722.083-.333-.167-1.405-.519-2.677-1.654-.99-.882-1.659-1.97-1.853-2.303-.194-.333-.021-.514.146-.68.149-.149.333-.388.499-.583.166-.194.222-.333.333-.555.111-.222.056-.416-.028-.583-.084-.166-.749-1.804-1.027-2.471-.27-.65-.546-.563-.749-.573-.194-.01-.416-.012-.638-.012s-.583.083-.888.416c-.305.333-1.165 1.137-1.165 2.775s1.193 3.222 1.359 3.444c.166.222 2.348 3.585 5.687 5.026.795.343 1.415.547 1.898.7.798.254 1.524.218 2.098.132.64-.096 1.967-.804 2.244-1.582.277-.778.277-1.444.194-1.582-.083-.139-.305-.222-.638-.388z"/></svg>
+          </span>
+          <div>
+            <span class="concierge__label">WhatsApp</span>
+            <span class="concierge__value">Mensaje directo</span>
+            <span class="concierge__hint">Respuesta en minutos</span>
+          </div>
+        </a>
+
+        <a href="mailto:contacto@matosdealer.do" class="concierge__card">
+          <span class="concierge__icon">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="26" height="20" rx="2"/><path d="M3 9l13 9 13-9"/></svg>
+          </span>
+          <div>
+            <span class="concierge__label">Escríbenos</span>
+            <span class="concierge__value">contacto@matosdealer.do</span>
+            <span class="concierge__hint">Atención confidencial</span>
+          </div>
         </a>
       </div>
-    </div>
-    <div class="hero__scroll">
-      <span>Scroll</span>
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════════
-       BRAND MARQUEE
-  ═══════════════════════════════════════════ -->
-  <div class="marquee">
-    <div class="marquee__track">
-      <span class="marquee__item">Toyota</span>
-      <span class="marquee__item">Honda</span>
-      <span class="marquee__item">Hyundai</span>
-      <span class="marquee__item">Kia</span>
-      <span class="marquee__item">Nissan</span>
-      <span class="marquee__item">Mitsubishi</span>
-      <span class="marquee__item">Chevrolet</span>
-      <span class="marquee__item">Suzuki</span>
-      <span class="marquee__item">Mazda</span>
-      <span class="marquee__item">Ford</span>
-      <span class="marquee__item">Toyota</span>
-      <span class="marquee__item">Honda</span>
-      <span class="marquee__item">Hyundai</span>
-      <span class="marquee__item">Kia</span>
-      <span class="marquee__item">Nissan</span>
-      <span class="marquee__item">Mitsubishi</span>
-      <span class="marquee__item">Chevrolet</span>
-      <span class="marquee__item">Suzuki</span>
-      <span class="marquee__item">Mazda</span>
-      <span class="marquee__item">Ford</span>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════
-       STATS
-  ═══════════════════════════════════════════ -->
-  <section class="stats reveal">
-    <div class="stats__grid">
-      <div class="stats__item">
-        <p class="stats__number" data-target="500"><span>+</span>0</p>
-        <p class="stats__label">Vehículos Vendidos</p>
+      <div class="concierge__footnote">
+        <span class="concierge__pulse"></span>
+        Asesor disponible · sin compromiso
       </div>
-      <div class="stats__item">
-        <p class="stats__number" data-target="10"><span>+</span>0</p>
-        <p class="stats__label">Años de Experiencia</p>
-      </div>
-      <div class="stats__item">
-        <p class="stats__number" data-target="15">0</p>
-        <p class="stats__label">Marcas Disponibles</p>
-      </div>
-      <div class="stats__item">
-        <p class="stats__number" data-target="98">0<span>%</span></p>
-        <p class="stats__label">Clientes Satisfechos</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       FEATURED VEHICLES (Dynamic from data)
-  ═══════════════════════════════════════════ -->
-  <section class="featured" id="inventario">
-    <div class="section-header reveal">
-      <p class="section-label">Selección Premium</p>
-      <h2 class="section-title">Vehículos <strong>Destacados</strong></h2>
-    </div>
-    <div class="inventory-tabs reveal">
-      <button class="inventory-tab active" data-filter="all">Todos</button>
-      <button class="inventory-tab" data-filter="SUV">SUVs</button>
-      <button class="inventory-tab" data-filter="Sedan">Sedanes</button>
-      <button class="inventory-tab" data-filter="Pickup">Pickups</button>
-    </div>
-    <div class="featured__grid" id="featuredGrid"></div>
-    <div class="featured__view-all reveal">
-      <a href="inventario.html" class="btn btn--dark">Ver Todo el Inventario</a>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       JOURNEY CTA
-  ═══════════════════════════════════════════ -->
-  <section class="journey">
-    <div class="reveal">
-      <h2 class="journey__title">Tu experiencia <strong>Isidro Motors</strong> comienza ahora.</h2>
-      <a href="inventario.html" class="btn btn--dark">Explorar Inventario</a>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       BRANDS GRID
-  ═══════════════════════════════════════════ -->
-  <section class="brands" id="marcas">
-    <div class="section-header reveal" style="padding-top:100px;">
-      <p class="section-label">Multimarca</p>
-      <h2 class="section-title">Todas las <strong>Marcas</strong></h2>
-    </div>
-    <div class="brands__grid" style="margin-top: 64px;">
-      <a href="inventario.html?marca=Toyota" class="brands__card reveal-stagger" style="transition-delay:0.05s">
-        <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=700&q=80" alt="Toyota" class="brands__card-img" loading="lazy">
-        <div class="brands__card-overlay"></div>
-        <div class="brands__card-content">
-          <h3 class="brands__card-name">Toyota</h3>
-          <p class="brands__card-detail">SUVs · Sedanes · Pickups</p>
-        </div>
-        <div class="brands__card-arrow">
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </div>
-      </a>
-      <a href="inventario.html?marca=Honda" class="brands__card reveal-stagger" style="transition-delay:0.15s">
-        <img src="https://images.unsplash.com/photo-1619405399517-d7fce0f13302?auto=format&fit=crop&w=700&q=80" alt="Honda" class="brands__card-img" loading="lazy">
-        <div class="brands__card-overlay"></div>
-        <div class="brands__card-content">
-          <h3 class="brands__card-name">Honda</h3>
-          <p class="brands__card-detail">Sedanes · SUVs · Coupés</p>
-        </div>
-        <div class="brands__card-arrow">
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </div>
-      </a>
-      <a href="inventario.html?marca=Hyundai" class="brands__card reveal-stagger" style="transition-delay:0.25s">
-        <img src="https://images.unsplash.com/photo-1629897048514-3dd7414fe72a?auto=format&fit=crop&w=700&q=80" alt="Hyundai" class="brands__card-img" loading="lazy">
-        <div class="brands__card-overlay"></div>
-        <div class="brands__card-content">
-          <h3 class="brands__card-name">Hyundai</h3>
-          <p class="brands__card-detail">SUVs · Sedanes · Eléctricos</p>
-        </div>
-        <div class="brands__card-arrow">
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </div>
-      </a>
-      <a href="inventario.html?marca=Kia" class="brands__card reveal-stagger" style="transition-delay:0.1s">
-        <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=700&q=80" alt="Kia" class="brands__card-img" loading="lazy">
-        <div class="brands__card-overlay"></div>
-        <div class="brands__card-content">
-          <h3 class="brands__card-name">Kia</h3>
-          <p class="brands__card-detail">Crossovers · Sedanes · SUVs</p>
-        </div>
-        <div class="brands__card-arrow">
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </div>
-      </a>
-      <a href="inventario.html?marca=Nissan" class="brands__card reveal-stagger" style="transition-delay:0.2s">
-        <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=700&q=80" alt="Nissan" class="brands__card-img" loading="lazy">
-        <div class="brands__card-overlay"></div>
-        <div class="brands__card-content">
-          <h3 class="brands__card-name">Nissan</h3>
-          <p class="brands__card-detail">Sedanes · SUVs · Pickups</p>
-        </div>
-        <div class="brands__card-arrow">
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </div>
-      </a>
-      <a href="inventario.html?marca=Mitsubishi" class="brands__card reveal-stagger" style="transition-delay:0.3s">
-        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=700&q=80" alt="Mitsubishi" class="brands__card-img" loading="lazy">
-        <div class="brands__card-overlay"></div>
-        <div class="brands__card-content">
-          <h3 class="brands__card-name">Mitsubishi</h3>
-          <p class="brands__card-detail">SUVs · Pickups · Sedanes</p>
-        </div>
-        <div class="brands__card-arrow">
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       CINEMATIC BANNER
-  ═══════════════════════════════════════════ -->
-  <section class="cinematic">
-    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80" alt="Vehículo de lujo en movimiento" class="cinematic__bg" loading="lazy">
-    <div class="cinematic__overlay"></div>
-    <div class="cinematic__content reveal">
-      <p class="cinematic__label">Financiamiento a tu medida</p>
-      <h2 class="cinematic__title">Lleva tu vehículo hoy con <strong>cuotas desde RD$8,000/mes</strong></h2>
-      <p class="cinematic__text">Trabajamos con Banco Popular, BHD, Reservas, Asociación Popular y más. Aprobación en 24 horas.</p>
-      <a href="https://wa.me/18296806829?text=Hola%2C%20quiero%20información%20sobre%20financiamiento" target="_blank" rel="noopener" class="btn btn--accent">Solicitar Financiamiento</a>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       PROCESS STEPS
-  ═══════════════════════════════════════════ -->
-  <section class="process">
-    <div class="section-header reveal">
-      <p class="section-label">Simple y rápido</p>
-      <h2 class="section-title">Cómo <strong>Comprar</strong></h2>
-    </div>
-    <div class="process__grid">
-      <div class="process__step reveal-stagger" style="transition-delay:0.1s">
-        <div class="process__num">01</div>
-        <h3 class="process__step-title">Elige tu Vehículo</h3>
-        <p class="process__step-text">Explora nuestro inventario o dinos qué buscas por WhatsApp.</p>
-      </div>
-      <div class="process__step reveal-stagger" style="transition-delay:0.2s">
-        <div class="process__num">02</div>
-        <h3 class="process__step-title">Visita el Dealer</h3>
-        <p class="process__step-text">Ven a conocer el vehículo en persona y realiza una prueba de manejo.</p>
-      </div>
-      <div class="process__step reveal-stagger" style="transition-delay:0.3s">
-        <div class="process__num">03</div>
-        <h3 class="process__step-title">Financiamiento</h3>
-        <p class="process__step-text">Elegimos juntos el plan de pago ideal para tu presupuesto.</p>
-      </div>
-      <div class="process__step reveal-stagger" style="transition-delay:0.4s">
-        <div class="process__num">04</div>
-        <h3 class="process__step-title">Entrega</h3>
-        <p class="process__step-text">Traspaso incluido. Sales manejando tu vehículo el mismo día.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       DISCOVER / SERVICES
-  ═══════════════════════════════════════════ -->
-  <section class="discover" id="servicios">
-    <div class="section-header reveal">
-      <p class="section-label">¿Por qué elegirnos?</p>
-      <h2 class="section-title">Descubre <strong>Isidro Motors</strong></h2>
-    </div>
-    <div class="discover__grid">
-      <div class="discover__card reveal-stagger" style="transition-delay:0.1s">
-        <div class="discover__card-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-        </div>
-        <h3 class="discover__card-title">Financiamiento Flexible</h3>
-        <p class="discover__card-text">Planes de financiamiento adaptados a tu presupuesto. Trabajamos con las principales entidades bancarias del país para ofrecerte las mejores tasas.</p>
-      </div>
-      <div class="discover__card reveal-stagger" style="transition-delay:0.25s">
-        <div class="discover__card-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3 class="discover__card-title">Garantía de Calidad</h3>
-        <p class="discover__card-text">Cada vehículo pasa por una inspección rigurosa de más de 100 puntos. Tu tranquilidad es nuestra prioridad absoluta.</p>
-      </div>
-      <div class="discover__card reveal-stagger" style="transition-delay:0.4s">
-        <div class="discover__card-icon">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <h3 class="discover__card-title">Traspaso Incluido</h3>
-        <p class="discover__card-text">Nos encargamos de todo el proceso legal y de traspaso. Tú solo preocúpate por elegir tu vehículo ideal.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       CEO — REIVY PUJOLS
-  ═══════════════════════════════════════════ -->
-  <section class="ceo">
-    <div class="ceo__inner">
-      <div class="ceo__image-col">
-        <div class="ceo__image-frame">
-          <img src="CEO.png" alt="Reivy Pujols — CEO de Isidro Motors" class="ceo__photo" loading="lazy">
-          <div class="ceo__image-accent"></div>
-        </div>
-      </div>
-      <div class="ceo__content">
-        <p class="section-label">Liderazgo & Visión</p>
-        <h2 class="ceo__name">Reivy <strong>Pujols</strong></h2>
-        <p class="ceo__role">CEO & Fundador de Isidro Motors</p>
-        <div class="ceo__divider"></div>
-        <blockquote class="ceo__quote">
-          "Mi visión siempre ha sido impulsar el desarrollo de Azua a través del emprendimiento. Isidro Motors no es solo un dealer de vehículos — es un compromiso con nuestra comunidad, con generar empleo y demostrar que desde Azua se pueden construir negocios de clase mundial."
-        </blockquote>
-        <p class="ceo__bio">Con más de una década de experiencia en el sector automotriz, Reivy Pujols ha transformado Isidro Motors en el dealer de referencia en la provincia de Azua. Su filosofía de negocio se basa en tres pilares: <strong>confianza, transparencia y servicio al cliente excepcional</strong>.</p>
-        <p class="ceo__bio">Bajo su liderazgo, Isidro Motors ha facilitado más de 500 vehículos a familias dominicanas, contribuyendo al crecimiento económico de la región y estableciendo un modelo de emprendimiento que inspira a la nueva generación de empresarios azuanos.</p>
-        <div class="ceo__values">
-          <div class="ceo__value">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Confianza</span>
-          </div>
-          <div class="ceo__value">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-            <span>Transparencia</span>
-          </div>
-          <div class="ceo__value">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span>Comunidad</span>
-          </div>
-          <div class="ceo__value">
-            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <span>Excelencia</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       TESTIMONIALS
-  ═══════════════════════════════════════════ -->
-  <section class="testimonials">
-    <div class="section-header reveal">
-      <p class="section-label">Testimonios</p>
-      <h2 class="section-title">Lo que dicen nuestros <strong>clientes</strong></h2>
-    </div>
-    <div class="testimonials__grid">
-      <div class="testimonial-card">
-        <div class="testimonial-card__stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testimonial-card__text">"Excelente servicio. Me ayudaron a encontrar exactamente lo que buscaba y el proceso de financiamiento fue muy rápido. Mi Toyota RAV4 está impecable."</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar">JR</div>
-          <div>
-            <p class="testimonial-card__name">Juan Ramírez</p>
-            <p class="testimonial-card__role">Cliente desde 2023</p>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-card__stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testimonial-card__text">"La mejor experiencia comprando un vehículo en Azua. Don Isidro es una persona de confianza y el equipo es muy profesional. Totalmente recomendado."</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar">MP</div>
-          <div>
-            <p class="testimonial-card__name">María Pérez</p>
-            <p class="testimonial-card__role">Cliente desde 2022</p>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-card__stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testimonial-card__text">"Compré mi Hyundai Tucson aquí y estoy encantado. El traspaso fue rapidísimo y el financiamiento con unas tasas muy buenas. Volveré para mi próximo vehículo."</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar">CS</div>
-          <div>
-            <p class="testimonial-card__name">Carlos Santos</p>
-            <p class="testimonial-card__role">Cliente desde 2024</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       FAQ
-  ═══════════════════════════════════════════ -->
-  <section class="faq" id="faq">
-    <div class="section-header reveal">
-      <p class="section-label">Preguntas frecuentes</p>
-      <h2 class="section-title">Resolvemos tus <strong>Dudas</strong></h2>
-    </div>
-    <div class="faq__list">
-      <div class="faq__item reveal-stagger" style="transition-delay:0.05s">
-        <button class="faq__question">¿Ofrecen financiamiento? <span class="faq__icon"></span></button>
-        <div class="faq__answer"><p>Sí, trabajamos con las principales entidades bancarias del país incluyendo Banco Popular, BHD, Reservas y Asociación Popular. Ofrecemos planes desde 12 hasta 72 meses con aprobación en 24 horas.</p></div>
-      </div>
-      <div class="faq__item reveal-stagger" style="transition-delay:0.1s">
-        <button class="faq__question">¿Qué marcas de vehículos tienen disponibles? <span class="faq__icon"></span></button>
-        <div class="faq__answer"><p>Somos un dealer multimarca. Trabajamos con Toyota, Honda, Hyundai, Kia, Nissan, Mitsubishi, Chevrolet, Suzuki, Mazda, Ford y muchas más. Si buscas una marca específica, contáctanos.</p></div>
-      </div>
-      <div class="faq__item reveal-stagger" style="transition-delay:0.15s">
-        <button class="faq__question">¿El traspaso está incluido en el precio? <span class="faq__icon"></span></button>
-        <div class="faq__answer"><p>Sí, en Isidro Motors nos encargamos de todo el proceso legal y de traspaso sin costos adicionales. Tú solo te preocupas por elegir tu vehículo.</p></div>
-      </div>
-      <div class="faq__item reveal-stagger" style="transition-delay:0.2s">
-        <button class="faq__question">¿Puedo hacer una prueba de manejo? <span class="faq__icon"></span></button>
-        <div class="faq__answer"><p>¡Por supuesto! Puedes visitar nuestro dealer en Azua y realizar una prueba de manejo del vehículo que te interese. Solo coordina una cita por WhatsApp.</p></div>
-      </div>
-      <div class="faq__item reveal-stagger" style="transition-delay:0.25s">
-        <button class="faq__question">¿Aceptan vehículos como parte de pago? <span class="faq__icon"></span></button>
-        <div class="faq__answer"><p>Sí, evaluamos tu vehículo actual y te ofrecemos un precio justo como parte de pago para tu nuevo vehículo. Contáctanos para una evaluación gratuita.</p></div>
-      </div>
-      <div class="faq__item reveal-stagger" style="transition-delay:0.3s">
-        <button class="faq__question">¿Qué garantía ofrecen? <span class="faq__icon"></span></button>
-        <div class="faq__answer"><p>Todos nuestros vehículos pasan por una inspección de más de 100 puntos. Ofrecemos garantía mecánica según el modelo y año del vehículo. Pregunta por los detalles específicos.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       LOCATION
-  ═══════════════════════════════════════════ -->
-  <section class="location" id="ubicacion">
-    <div class="section-header reveal">
-      <p class="section-label">Visítanos</p>
-      <h2 class="section-title">Nuestra <strong>Ubicación</strong></h2>
-    </div>
-    <div class="location__grid">
-      <div class="reveal">
-        <div class="location__info-item">
-          <div class="location__info-icon">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <p class="location__info-label">Dirección</p>
-            <p class="location__info-value">Azua de Compostela, República Dominicana</p>
-          </div>
-        </div>
-        <div class="location__info-item">
-          <div class="location__info-icon">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div>
-            <p class="location__info-label">Teléfonos</p>
-            <p class="location__info-value">829-680-6829 · 809-953-0495</p>
-          </div>
-        </div>
-        <div class="location__info-item">
-          <div class="location__info-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div>
-            <p class="location__info-label">Horario</p>
-            <p class="location__info-value">Lunes a Sábado: 8:00 AM - 6:00 PM</p>
-          </div>
-        </div>
-        <div style="margin-top:32px">
-          <a href="https://wa.me/18296806829?text=Hola%2C%20quiero%20visitar%20el%20dealer" target="_blank" rel="noopener" class="btn btn--dark">Agendar Visita</a>
-        </div>
-      </div>
-      <div class="location__map reveal">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30268.24!2d-70.73!3d18.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea56e8f1b0c5b3f%3A0x2e1e5e5e5e5e5e5e!2sAzua%20de%20Compostela!5e0!3m2!1ses!2sdo!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       CONTACT BANNER
-  ═══════════════════════════════════════════ -->
-  <section class="contact-banner" id="contacto">
-    <h2 class="contact-banner__title reveal">¿Listo para tu <strong>próximo vehículo</strong>?</h2>
-    <p class="contact-banner__desc reveal">Contáctanos hoy y te ayudamos a encontrar el vehículo perfecto para ti. Estamos en Azua, República Dominicana.</p>
-    <div class="contact-banner__phones reveal">
-      <a href="tel:+18296806829" class="contact-banner__phone">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        829-680-6829
-      </a>
-      <a href="tel:+18099530495" class="contact-banner__phone">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        809-953-0495
-      </a>
-    </div>
-    <div class="contact-banner__actions reveal">
-      <a href="https://wa.me/18296806829?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo%20en%20Isidro%20Motors" target="_blank" rel="noopener" class="btn btn--whatsapp">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.106 1.519 5.834L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-        Escribir por WhatsApp
-      </a>
-      <a href="tel:+18296806829" class="btn btn--outline" style="border-color:rgba(255,255,255,0.25)">Llamar Ahora</a>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════ -->
-  <footer>
-    <div class="footer__inner">
+  <footer class="footer-cinema">
+    <div class="footer-cinema__top">
+      <h3 class="footer-cinema__bigword">
+        Matos<br><em>Dealer</em>.
+      </h3>
+      <a href="https://wa.me/18293189380" class="footer-cinema__cta" target="_blank" rel="noopener">
+        <span>Iniciar conversación</span>
+        <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 16h20M20 8l8 8-8 8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="footer-cinema__grid">
       <div>
-        <p class="footer__brand-name">ISIDRO <span>MOTORS</span></p>
-        <p class="footer__brand-text">Tu dealer de confianza en Azua, República Dominicana. Vehículos de todas las marcas con garantía, financiamiento y traspaso incluido.</p>
-      </div>
-      <div>
-        <h4 class="footer__heading">Navegación</h4>
-        <ul class="footer__links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="inventario.html">Inventario</a></li>
-          <li><a href="#marcas">Marcas</a></li>
-          <li><a href="#servicios">Servicios</a></li>
+        <span class="footer-cinema__label">Navegación</span>
+        <ul>
+          <li><a href="#inventario">Inventario</a></li>
+          <li><a href="#manifesto">Filosofía</a></li>
+          <li><a href="#experience">Experiencia</a></li>
+          <li><a href="#showroom">Showroom</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="footer__heading">Marcas</h4>
-        <ul class="footer__links">
-          <li><a href="inventario.html?marca=Toyota">Toyota</a></li>
-          <li><a href="inventario.html?marca=Honda">Honda</a></li>
-          <li><a href="inventario.html?marca=Hyundai">Hyundai</a></li>
-          <li><a href="inventario.html?marca=Kia">Kia</a></li>
-          <li><a href="inventario.html?marca=Nissan">Nissan</a></li>
-          <li><a href="inventario.html?marca=Mitsubishi">Mitsubishi</a></li>
+        <span class="footer-cinema__label">Contacto</span>
+        <ul>
+          <li><a href="https://wa.me/18293189380" target="_blank" rel="noopener">+1 (829) 318-9380</a></li>
+          <li><a href="mailto:contacto@matosdealer.do">contacto@matosdealer.do</a></li>
+          <li>Santo Domingo · D.N.</li>
         </ul>
       </div>
       <div>
-        <h4 class="footer__heading">Contacto</h4>
-        <div class="footer__contact-item">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Azua de Compostela,<br>República Dominicana</span>
-        </div>
-        <div class="footer__contact-item">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>829-680-6829<br>809-953-0495</span>
-        </div>
-        <div class="footer__contact-item">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          <span>WhatsApp disponible</span>
-        </div>
+        <span class="footer-cinema__label">Síguenos</span>
+        <ul>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="#" aria-label="YouTube">YouTube</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">&copy; 2026 Isidro Motors. Todos los derechos reservados.</p>
-      <div class="footer__socials">
-        <a href="https://wa.me/18296806829" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.106 1.519 5.834L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#fff"/></svg>
-        </a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-      </div>
+
+    <div class="footer-cinema__bottom">
+      <p>&copy; 2026 Matos Dealer · Demo de referencia. Sitio no oficial.</p>
+      <p>Diseño cinematográfico · República Dominicana</p>
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════════
-       FLOATING WHATSAPP BUTTON
-  ═══════════════════════════════════════════ -->
-  <a href="https://wa.me/18296806829?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo%20en%20Isidro%20Motors" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.106 1.519 5.834L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.855 0-3.63-.5-5.182-1.446l-.37-.222-3.842 1.007 1.024-3.742-.243-.387A9.78 9.78 0 012.182 12c0-5.41 4.408-9.818 9.818-9.818S21.818 6.59 21.818 12s-4.408 9.818-9.818 9.818z"/></svg>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/18293189380?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M16.001 2.667C8.637 2.667 2.667 8.637 2.667 16c0 2.351.617 4.654 1.79 6.683L2.667 29.333l6.86-1.79A13.323 13.323 0 0 0 16 29.333c7.364 0 13.333-5.97 13.333-13.333S23.363 2.667 16 2.667zm0 24.4a11.04 11.04 0 0 1-5.626-1.539l-.404-.24-4.075 1.069 1.087-3.974-.263-.418A11.07 11.07 0 0 1 4.933 16C4.933 9.892 9.893 4.933 16 4.933s11.067 4.96 11.067 11.067-4.96 11.067-11.067 11.067zm6.07-8.293c-.333-.166-1.967-.97-2.272-1.082-.305-.111-.527-.166-.749.167s-.86 1.082-1.054 1.304c-.194.222-.388.25-.722.083-.333-.167-1.405-.519-2.677-1.654-.99-.882-1.659-1.97-1.853-2.303-.194-.333-.021-.514.146-.68.149-.149.333-.388.499-.583.166-.194.222-.333.333-.555.111-.222.056-.416-.028-.583-.084-.166-.749-1.804-1.027-2.471-.27-.65-.546-.563-.749-.573-.194-.01-.416-.012-.638-.012s-.583.083-.888.416c-.305.333-1.165 1.137-1.165 2.775s1.193 3.222 1.359 3.444c.166.222 2.348 3.585 5.687 5.026.795.343 1.415.547 1.898.7.798.254 1.524.218 2.098.132.64-.096 1.967-.804 2.244-1.582.277-.778.277-1.444.194-1.582-.083-.139-.305-.222-.638-.388z"/></svg>
   </a>
 
-  <!-- ═══════════════════════════════════════════
-       SCRIPTS
-  ═══════════════════════════════════════════ -->
-  <script src="js/vehiculos-data.js?v=3"></script>
-  <script src="js/shared.js?v=3"></script>
-  <script>
-    // Hero image load animation
-    var heroBg = document.getElementById('heroBg');
-    if (heroBg.complete) {
-      heroBg.classList.add('loaded');
-    } else {
-      heroBg.addEventListener('load', function() { heroBg.classList.add('loaded'); });
-    }
-
-    // Animated counter for stats
-    var counterObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var counters = entry.target.querySelectorAll('.stats__number');
-          counters.forEach(function(counter) {
-            var target = parseInt(counter.getAttribute('data-target'));
-            var prefix = counter.innerHTML.indexOf('+') > -1 ? '+' : '';
-            var suffixText = counter.innerHTML.indexOf('%') > -1 ? '%' : '';
-            var current = 0;
-            var increment = target / 60;
-            var timer = setInterval(function() {
-              current += increment;
-              if (current >= target) {
-                current = target;
-                clearInterval(timer);
-              }
-              if (prefix) {
-                counter.innerHTML = '<span>' + prefix + '</span>' + Math.floor(current);
-              } else if (suffixText) {
-                counter.innerHTML = Math.floor(current) + '<span>' + suffixText + '</span>';
-              } else {
-                counter.textContent = Math.floor(current);
-              }
-            }, 25);
-          });
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    var statsSection = document.querySelector('.stats');
-    if (statsSection) counterObserver.observe(statsSection);
-
-    // Dynamic Featured Vehicles from data
-    var featuredGrid = document.getElementById('featuredGrid');
-    var featuredVehicles = VEHICULOS.filter(function(v) { return v.destacado; });
-
-    function renderFeatured(filter) {
-      var filtered = filter === 'all'
-        ? featuredVehicles
-        : featuredVehicles.filter(function(v) { return v.tipo === filter; });
-
-      featuredGrid.innerHTML = filtered.map(function(v, i) {
-        return renderVehicleCard(v, i);
-      }).join('');
-    }
-
-    renderFeatured('all');
-
-    // Inventory filter tabs
-    document.querySelectorAll('.inventory-tab').forEach(function(tab) {
-      tab.addEventListener('click', function() {
-        document.querySelectorAll('.inventory-tab').forEach(function(t) { t.classList.remove('active'); });
-        tab.classList.add('active');
-        renderFeatured(tab.getAttribute('data-filter'));
-      });
-    });
-
-    // FAQ accordion
-    document.querySelectorAll('.faq__question').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var item = btn.parentElement;
-        var wasActive = item.classList.contains('active');
-        document.querySelectorAll('.faq__item').forEach(function(i) { i.classList.remove('active'); });
-        if (!wasActive) item.classList.add('active');
-      });
-    });
-  </script>
+  <!-- Vehicle data + scripts -->
+  <script src="js/vehiculos-data.js?v=4"></script>
+  <script src="js/features.js?v=1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/cinematic.js?v=3"></script>
 </body>
 </html>

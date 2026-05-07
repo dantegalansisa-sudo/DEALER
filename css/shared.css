@@ -188,10 +188,49 @@ ul { list-style: none; }
   transform: rotate(45deg) translate(5px, 5px);
 }
 .navbar__burger.active span:nth-child(2) {
-  opacity: 0;
-}
-.navbar__burger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ═══════════════════════════════════════════
+   NAVBAR CTA (cinematic build)
+═══════════════════════════════════════════ */
+.navbar__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px 9px 22px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 100px;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff !important;
+  text-decoration: none;
+  transition: background 0.4s, border-color 0.4s, transform 0.3s;
+  white-space: nowrap;
+}
+.navbar__cta:hover {
+  background: rgba(201, 168, 76, 0.95);
+  border-color: rgba(201, 168, 76, 0.95);
+  transform: translateY(-1px);
+}
+.navbar__cta::after { display: none !important; }
+.navbar__cta svg { transition: transform 0.3s; }
+.navbar__cta:hover svg { transform: translateX(3px); }
+
+/* Floating navbar mode (already dark — used as marker for JS) */
+.navbar--floating {}
+.navbar--solid { background: rgba(13,13,13,0.96); }
+
+/* Favorites link with counter pill */
+.navbar__fav {
+  display: inline-flex;
+  align-items: center;
+}
+.navbar__fav .wish-counter-pill {
+  margin-left: 6px;
 }
 
 /* ═══════════════════════════════════════════

@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventario — Isidro Motors</title>
-  <meta name="description" content="Explora nuestro inventario completo de vehículos en Azua.">
+  <title>Inventario — Matos Dealer</title>
+  <meta name="description" content="Explora nuestro inventario completo de vehículos premium en Santo Domingo.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/shared.css?v=3">
-  <link rel="stylesheet" href="css/inventario.css?v=3">
+  <link rel="stylesheet" href="css/shared.css?v=4">
+  <link rel="stylesheet" href="css/inventario.css?v=4">
+  <link rel="stylesheet" href="css/pages.css?v=1">
 </head>
 <body>
 
@@ -17,13 +18,13 @@
        NAVBAR
   ═══════════════════════════════════════════ -->
   <nav class="navbar" id="navbar">
-    <a href="index.html" class="navbar__logo">ISIDRO <span>MOTORS</span></a>
+    <a href="index.html" class="navbar__logo">MATOS <span>DEALER</span></a>
     <div class="navbar__links">
       <a href="index.html">Inicio</a>
       <a href="inventario.html">Inventario</a>
       <a href="index.html#marcas">Marcas</a>
       <a href="index.html#servicios">Servicios</a>
-      <a href="https://wa.me/18296806829?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo" class="navbar__whatsapp" target="_blank" rel="noopener">
+      <a href="https://wa.me/18293189380?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo" class="navbar__whatsapp" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.106 1.519 5.834L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.855 0-3.63-.5-5.182-1.446l-.37-.222-3.842 1.007 1.024-3.742-.243-.387A9.78 9.78 0 012.182 12c0-5.41 4.408-9.818 9.818-9.818S21.818 6.59 21.818 12s-4.408 9.818-9.818 9.818z"/></svg>
         WhatsApp
       </a>
@@ -39,7 +40,7 @@
     <a href="inventario.html" class="mobile-link">Inventario</a>
     <a href="index.html#marcas" class="mobile-link">Marcas</a>
     <a href="index.html#servicios" class="mobile-link">Servicios</a>
-    <a href="https://wa.me/18296806829?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo" target="_blank" rel="noopener" class="btn btn--whatsapp" style="margin-top:16px;">
+    <a href="https://wa.me/18293189380?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo" target="_blank" rel="noopener" class="btn btn--whatsapp" style="margin-top:16px;">
       <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.106 1.519 5.834L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.855 0-3.63-.5-5.182-1.446l-.37-.222-3.842 1.007 1.024-3.742-.243-.387A9.78 9.78 0 012.182 12c0-5.41 4.408-9.818 9.818-9.818S21.818 6.59 21.818 12s-4.408 9.818-9.818 0z"/></svg>
       WhatsApp
     </a>
@@ -176,7 +177,7 @@
   <footer>
     <div class="footer__inner">
       <div>
-        <p class="footer__brand-name">ISIDRO <span>MOTORS</span></p>
+        <p class="footer__brand-name">MATOS <span>DEALER</span></p>
         <p class="footer__brand-text">Tu dealer de confianza en Azua, República Dominicana. Vehículos de todas las marcas con garantía, financiamiento y traspaso incluido.</p>
       </div>
       <div>
@@ -218,7 +219,7 @@
     <div class="footer__bottom">
       <p class="footer__copy">&copy; 2026 Isidro Motors. Todos los derechos reservados.</p>
       <div class="footer__socials">
-        <a href="https://wa.me/18296806829" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <a href="https://wa.me/18293189380" target="_blank" rel="noopener" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.106 1.519 5.834L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
         </a>
         <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -234,15 +235,16 @@
   <!-- ═══════════════════════════════════════════
        FLOATING WHATSAPP BUTTON
   ═══════════════════════════════════════════ -->
-  <a href="https://wa.me/18296806829?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo%20en%20Isidro%20Motors" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+  <a href="https://wa.me/18293189380?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo%20en%20Isidro%20Motors" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.106 1.519 5.834L0 24l6.335-1.652A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.855 0-3.63-.5-5.182-1.446l-.37-.222-3.842 1.007 1.024-3.742-.243-.387A9.78 9.78 0 012.182 12c0-5.41 4.408-9.818 9.818-9.818S21.818 6.59 21.818 12s-4.408 9.818-9.818 9.818z"/></svg>
   </a>
 
   <!-- ═══════════════════════════════════════════
        SCRIPTS
   ═══════════════════════════════════════════ -->
-  <script src="js/vehiculos-data.js?v=3"></script>
-  <script src="js/shared.js?v=3"></script>
-  <script src="js/inventario.js?v=3"></script>
+  <script src="js/vehiculos-data.js?v=4"></script>
+  <script src="js/features.js?v=1"></script>
+  <script src="js/shared.js?v=4"></script>
+  <script src="js/inventario.js?v=4"></script>
 </body>
 </html>
