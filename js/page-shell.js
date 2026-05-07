@@ -20,7 +20,7 @@
             <span class="wish-counter-pill is-empty" data-wish-counter>0</span>
           </a>
         </div>
-        <a href="https://wa.me/18293189380" class="navbar__cta" target="_blank" rel="noopener">
+        <a href="https://wa.me/18293189380?text=Hola%2C%20escribo%20desde%20su%20sitio%20web%20%28https%3A%2F%2Fdealer-seven-blush.vercel.app%29%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20veh%C3%ADculos%20disponibles." class="navbar__cta" target="_blank" rel="noopener">
           <span>Contactar</span>
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>`;
@@ -34,7 +34,7 @@
       f.innerHTML = `
         <div class="footer-cinema__top">
           <h3 class="footer-cinema__bigword">Matos<br><em>Dealer</em>.</h3>
-          <a href="https://wa.me/18293189380" class="footer-cinema__cta" target="_blank" rel="noopener">
+          <a href="https://wa.me/18293189380?text=Hola%2C%20escribo%20desde%20su%20sitio%20web%20%28https%3A%2F%2Fdealer-seven-blush.vercel.app%29%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20veh%C3%ADculos%20disponibles." class="footer-cinema__cta" target="_blank" rel="noopener">
             <span>Iniciar conversación</span>
             <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 16h20M20 8l8 8-8 8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -62,7 +62,7 @@
           <div>
             <span class="footer-cinema__label">Contacto</span>
             <ul>
-              <li><a href="https://wa.me/18293189380" target="_blank" rel="noopener">+1 (829) 318-9380</a></li>
+              <li><a href="https://wa.me/18293189380?text=Hola%2C%20escribo%20desde%20su%20sitio%20web%20%28https%3A%2F%2Fdealer-seven-blush.vercel.app%29%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20veh%C3%ADculos%20disponibles." target="_blank" rel="noopener">+1 (829) 318-9380</a></li>
               <li><a href="mailto:contacto@matosdealer.do">contacto@matosdealer.do</a></li>
               <li>Santo Domingo · D.N.</li>
             </ul>
@@ -84,7 +84,7 @@
 
     if (!document.querySelector('.whatsapp-float')) {
       const w = document.createElement('a');
-      w.href = 'https://wa.me/18293189380?text=Hola%2C%20me%20interesa%20un%20veh%C3%ADculo';
+      w.href = 'https://wa.me/18293189380?text=' + encodeURIComponent('Hola, escribo desde su sitio web (https://dealer-seven-blush.vercel.app) y me gustaría conocer más sobre los vehículos disponibles.');
       w.target = '_blank';
       w.rel = 'noopener';
       w.className = 'whatsapp-float';

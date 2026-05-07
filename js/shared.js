@@ -11,12 +11,13 @@ window.formatPrecio = function(vehiculo) {
 };
 
 window.buildWhatsAppLink = function(vehiculo) {
+  var price = (vehiculo.precio && !vehiculo.precioConsultar) ? ' (RD$ ' + vehiculo.precio.toLocaleString('es-DO') + ')' : '';
   var msg = encodeURIComponent(
-    'Hola, me interesa el ' + vehiculo.marca + ' ' + vehiculo.modelo + ' ' + vehiculo.ano +
-    (vehiculo.precio && !vehiculo.precioConsultar ? ' (RD$ ' + vehiculo.precio.toLocaleString('es-DO') + ')' : '') +
+    'Hola, escribo desde su sitio web (https://dealer-seven-blush.vercel.app) y me interesa el ' +
+    vehiculo.marca + ' ' + vehiculo.modelo + ' ' + vehiculo.ano + price +
     '. ¿Tiene disponibilidad?'
   );
-  return 'https://wa.me/18296806829?text=' + msg;
+  return 'https://wa.me/18293189380?text=' + msg;
 };
 
 window.renderVehicleCard = function(v, index) {
